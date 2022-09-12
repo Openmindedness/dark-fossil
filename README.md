@@ -1,2 +1,2 @@
 # dark-fossil
-bootleg dark web for fossil ridge high fort collins
+news about fossil ridge high fort collins that couldnt make it to the 
