@@ -53,6 +53,7 @@ function topage(data) {
     articles[i] = divs[i].split(' \\a ')
     html = html + "\n"
   for(var i2 = 0; i2 <= articles[i].length - 1; i2++) {
+    if(articles[i][i2]) {
     articles2[i2] = articles[i][i2].split(' \\i ')
     html = html + '<a href="https://psd.sector.blue/read/' + articles2[i2][1]  + '">'
     html = html + '<img src=\"' + articles2[i2][0] + '">' + articles2[i2][1] + '</img>'
@@ -60,6 +61,7 @@ function topage(data) {
      if (i2 == articles[i].length ) {
  
   return html
+    }
     }
   }
   }
