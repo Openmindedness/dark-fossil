@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/javascript/somefile.js?v=<?= $this->cacheBust; ?>"></script>
 <link rel="stylesheet" type="text/css" href="/css/layout.css?v=<?= $this->cacheBust; ?>">
+    <script src=”https://unpkg.com/axios/dist/axios.min.js”></script>
   </head>
   <body>
  
@@ -34,15 +35,11 @@
 
 </div>
 <script>
-$( function(){
-    $.ajax({
-        url: 'https://psd.sector.blue/data.txt',
-        type: 'get',
-        success: function(data) {
-          document.getElementById("articles").innerHTML = topage(data);
-        },
-    });
-});
+axios.get('/data.txt', {
+})
+.then(function (response) {
+	document.getElementById("articles").innerHTML = topage(response);
+})
 function topage(data) {
   var divs = data.split(" \\d ")
   var articles = []
