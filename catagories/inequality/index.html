@@ -41,6 +41,7 @@ axios.get('/data.txt', {
 	document.getElementById("articles").innerHTML = topage(response);
 })
 function topage(data) {
+	console.log(data)
   var divs = data.split(" \\d ")
   var articles = []
     var articles2 = []
