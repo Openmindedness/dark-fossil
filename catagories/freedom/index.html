@@ -37,7 +37,7 @@ $( function(){
         url: 'https://psd.sector.blue/data.txt',
         type: 'get',
         success: function(data) {
-          document.getElementById("articles").innerHTML = data;
+          document.getElementById("articles").innerHTML = topage(data);
         },
     });
 });
@@ -59,7 +59,7 @@ function topage(data) {
   }
   }
   }
-  
+  return html
 }
 
 
